@@ -1,8 +1,10 @@
+
 package com.example.lab_8
 
 // Lab 8 - Verify continuous integration
 
 class Wizard(val name: String, var mana: Int, var spellPower: Int) {
+
     fun castSpell(spell: String): Int {
         when (spell) {
             "Explosion" -> {
@@ -11,15 +13,21 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
                     return spellPower * 3
                 } else return 0 // not enough mana
             }
+
             "Frostbite" -> {
                 if (mana >= 5) {
                     mana -= 5
                     return spellPower * 2
                 } else return 0 // not enough mana
             }
+
             else -> {
                 return 0 // invalid spell
             }
         }
+    }
+
+    fun restoreMana(amount: Int) {
+
     }
 }
